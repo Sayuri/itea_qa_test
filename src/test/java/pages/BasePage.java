@@ -31,6 +31,11 @@ public class BasePage {
         return waitUntilElementIsDisplayed(element, 10);
     }
 
+    /**
+     * Explicitly waits for 10 seconds for WebElement to be clickable
+     * @param element WebElement that will be explicitly waited to be clickable
+     * @return WebElement that was explicitly waited to be clickable
+     */
     public WebElement waitUntilElementIsClickable(WebElement element) {
         WebDriverWait wait = new WebDriverWait(ConfigurationManager.getDriver(), 10);
         return wait.until(ExpectedConditions.elementToBeClickable(element));

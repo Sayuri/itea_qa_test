@@ -19,7 +19,6 @@ public class ConfigurationManager {
 
     /**
      * Returns the WebDriver object that was initiated before or creates one if is wasn't initiated before
-     *
      * @return WebDriver object
      */
     public static WebDriver getDriver() {
@@ -31,7 +30,6 @@ public class ConfigurationManager {
 
     /**
      * Creates new WebDriver
-     *
      * @throws IOException that can be thrown while reading from the file where the properties lie
      */
     private static void init() {
@@ -58,8 +56,7 @@ public class ConfigurationManager {
 
     /**
      * Checks whether OS that the app is running on is Windows
-     *
-     * @return tru if the OS the app is running on is Windows
+     * @return true if the OS the app is running on is Windows
      */
     private static boolean osIsWindows() {
         return System.getProperty("os.name").contains("Windows");
@@ -67,8 +64,7 @@ public class ConfigurationManager {
 
     /**
      * Checks whether OS that the app is running on is Mac OS
-     *
-     * @return tru if the OS the app is running on is Mac OS
+     * @return true if the OS the app is running on is Mac OS
      */
     private static boolean osIsMacOS() {
         return System.getProperty("os.name").contains("Mac");
@@ -76,8 +72,7 @@ public class ConfigurationManager {
 
     /**
      * Checks whether OS that the app is running on is Linux
-     *
-     * @return tru if the OS the app is running on is Linux
+     * @return true if the OS the app is running on is Linux
      */
     private static boolean osIsLinux() {
         return System.getProperty("os.name").contains("Linux");
@@ -86,7 +81,6 @@ public class ConfigurationManager {
     /**
      * Creates new WebDriver for Windows depends on the properties
      * Creates new FirefoxDriver or new ChromeDriver or new InternetExplorerDriver
-     *
      * @param prop is the properties file where the driver that should be created is written
      */
     private static void setTheDriverForWindows(Properties prop) {
@@ -105,7 +99,6 @@ public class ConfigurationManager {
     /**
      * Creates new WebDriver depends on the properties
      * Creates new FirefoxDriver or new ChromeDriver
-     *
      * @param prop is the properties file where the driver that should be created is written
      */
     private static void setTheDriverForMacOS(Properties prop) {
@@ -121,7 +114,6 @@ public class ConfigurationManager {
     /**
      * Creates new WebDriver depends on the properties
      * Creates new FirefoxDriver or new ChromeDriver
-     *
      * @param prop is the properties file where the driver that should be created is written
      */
     private static void setTheDriverForLinux(Properties prop) {
